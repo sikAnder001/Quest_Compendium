@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/recycler_background"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TvDxLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:gravity="center"
+        android:text="Would you like to checkin with another Hotel?"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        style="@style/TvDxLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:gravity="center"
+        android:text="Please scan QR Code"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_20sdp" />
+
+    <!-- <ImageView
+         android:id="@+id/ivQrScan"
+         android:layout_width="@dimen/_200sdp"
+         android:layout_height="@dimen/_200sdp"
+         android:layout_marginTop="@dimen/_15sdp"
+         android:src="@drawable/iv_qr_code"
+         android:layout_gravity="center" />-->
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonVisible="false"
+            app:frameAspectRatioHeight="1"
+            app:frameAspectRatioWidth="1"
+            app:frameColor="@android:color/white"
+            app:frameCornersRadius="0dp"
+            app:frameCornersSize="50dp"
+            app:frameSize="0.60"
+            app:frameThickness="2dp"
+            app:maskColor="@color/recycler_background" />
+
+    </FrameLayout>
+</LinearLayout>
+

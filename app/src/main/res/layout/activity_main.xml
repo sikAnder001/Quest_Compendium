@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:context="com.questcompendium.activity.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rlMap"
+        style="@style/RootLayout"
+        android:layout_below="@+id/toolbar"
+        android:visibility="invisible">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:mContext="com.mobyads.activity.MapsActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSearchBar"
+        style="@style/NormalLayout"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/round_rectangle_color_primary"
+        android:visibility="gone">
+
+        <com.rey.material.widget.ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_search"
+            android:tint="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
+            style="@style/NormalLayout"
+            android:layout_width="match_parent"
+            android:layout_toStartOf="@+id/ivSearchMap"
+            android:layout_toEndOf="@+id/ivSearch"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search Here"
+            app:searchIcon="@null" />
+
+        <com.rey.material.widget.ImageView
+            android:id="@+id/ivSearchMap"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_map"
+            android:tint="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHotelList"
+        style="@style/RecycleView78"
+        android:layout_below="@+id/rlSearchBar"
+        android:layout_margin="@dimen/_6sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <include
+        layout="@layout/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlSearchBar"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlHotelList"
+        style="@style/RootLayout"
+        android:layout_below="@id/toolbar"
+        android:background="#80000000"
+        android:padding="@dimen/_12sdp"
+        android:visibility="gone">
+
+        <LinearLayout
+            style="@style/NormalLayout"
+            android:layout_above="@+id/tvMoreDetail"
+            android:background="@drawable/rectangle_rounded_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rlHome"
+                style="@style/NormalLayout"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.rey.material.widget.ImageView
+                    android:id="@+id/ivHotel"
+                    style="@style/RootLayout"
+                    android:layout_width="@dimen/_75sdp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    style="@style/RootLayout"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:orientation="vertical">
+
+                    <com.rey.material.widget.TextView
+                        android:id="@+id/tvHotelName"
+                        style="@style/TvStandard"
+                        android:singleLine="true"
+                        android:text="Taj hotel Taj hotel"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                    <com.rey.material.widget.TextView
+                        android:id="@+id/tvHotelDesc"
+                        style="@style/TvStandard"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:singleLine="true"
+                        android:text="Taj hotel"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        style="@style/RootLayout"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:orientation="horizontal">
+
+                        <com.rey.material.widget.ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/ic_map"
+                            android:tint="@color/colorPrimary" />
+
+                        <com.rey.material.widget.TextView
+                            android:id="@+id/tvDistance"
+                            style="@style/TvStandard"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:text="Taj hotel"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.rey.material.widget.TextView
+            android:id="@+id/tvMoreDetail"
+            style="@style/NormalLayout"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_above="@+id/tvCancel"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/rectangle_rounded_white"
+            android:gravity="center"
+            android:text="View Detail"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.rey.material.widget.TextView
+            android:id="@+id/tvCancel"
+            style="@style/NormalLayout"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/rectangle_rounded_white"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/Widget.BottomNavigationView"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        style="@style/BottomNavigationView"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        style="@style/RootLayout"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/toolbar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="MainActivity" />
+
+    <LinearLayout
+        android:id="@+id/rlMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--  <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/black"
+              android:visibility="visible" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMenuList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+</RelativeLayout>

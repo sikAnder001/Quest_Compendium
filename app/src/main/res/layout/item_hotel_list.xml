@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    style="@style/NormalLayout"
+    android:id="@+id/cvHotelItem"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/_4sdp"
+    card_view:cardElevation="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/rlHome"
+        style="@style/NormalLayout"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.rey.material.widget.ImageView
+            android:id="@+id/ivHotel"
+            style="@style/RootLayout"
+            android:layout_width="@dimen/_75sdp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            style="@style/RootLayout"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/tvHotelName"
+                style="@style/TvStandard"
+                android:singleLine="true"
+                android:text="Taj hotel Taj hotel"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/tvHotelDesc"
+                style="@style/TvStandard"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/optima_medium"
+                android:singleLine="true"
+                android:text="Taj hotel"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                style="@style/RootLayout"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+                <com.rey.material.widget.ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_map"
+                    android:tint="@color/colorPrimary" />
+
+                <com.rey.material.widget.TextView
+                    style="@style/TvStandard"
+                    android:id="@+id/tvDistance"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/optima_medium"
+                    android:text="Taj hotel"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

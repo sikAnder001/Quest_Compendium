@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMenu"
+    style="@style/NormalLayout">
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        style="@style/TvStandard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_8sdp"
+        android:text="About Us"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_14sdp" />
+
+    <View
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="1.5dp"
+        android:layout_below="@+id/tvAboutUs"
+        android:layout_centerHorizontal="true"
+        android:background="@color/grey" />
+</RelativeLayout>

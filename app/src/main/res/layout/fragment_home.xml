@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlHomeScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        style="@style/RootLayout"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        style="@style/RootLayout"
+        android:background="@color/black_transparency" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout style="@style/RootLayout">
+
+            <RelativeLayout
+                android:id="@+id/rlSearchBar"
+                style="@style/NormalLayout"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/round_rectangle_color_primary"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    style="@style/TvSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_toStartOf="@+id/ivSearch"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:hint="Search here"
+                    android:imeOptions="actionSearch"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/_14sdp" />
+
+                <com.rey.material.widget.ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/colorPrimary" />
+                <!--android:src="@drawable/ic_search"-->
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/RootLayout"
+                android:layout_below="@+id/rlSearchBar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_standard"
+                    android:padding="@dimen/padding_standard"
+                    android:background="@drawable/box_transparency"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.rey.material.widget.TextView
+                            style="@style/TvStandard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Welcome to"
+                            android:textColor="@color/white"
+                             />
+
+                        <com.rey.material.widget.TextView
+                            android:id="@+id/tvWelcome"
+                            style="@style/TvStandard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:textAllCaps="true"
+                            android:text="Hotel"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/txt_standard" />
+                    </LinearLayout>
+
+                    <com.rey.material.widget.TextView
+                        android:id="@+id/tvHotelDesc"
+                        style="@style/TvSmall"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_root"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.rey.material.widget.TextView
+                                android:id="@+id/tvDate"
+                                style="@style/TvSmall"
+                                android:gravity="top|end"
+                                android:text="20 March, 2020"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <com.rey.material.widget.TextView
+                                android:id="@+id/tvDayOfWeek"
+                                style="@style/TvSmall"
+                                android:gravity="start"
+                                android:text="Sunday"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <com.rey.material.widget.TextView
+                            android:id="@+id/tvCurrentTemp"
+                            style="@style/TvSmall"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_22sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/RootLayout"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHotelMenu"
+                        style="@style/RecycleView78"
+                        android:layout_marginTop="@dimen/padding_mini"
+                        android:paddingBottom="@dimen/margin_view"
+                         />
+
+                    <!--  <LinearLayout
+                          style="@style/NormalLayout"
+                          android:layout_marginStart="@dimen/_8sdp"
+                          android:layout_marginTop="@dimen/_16sdp"
+                          android:layout_marginEnd="@dimen/_8sdp"
+                          android:orientation="horizontal"
+                          android:visibility="gone"
+                          android:weightSum="2">
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_130sdp"
+                              android:layout_marginEnd="@dimen/_3sdp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                              <RelativeLayout
+                                  android:layout_width="@dimen/_80sdp"
+                                  android:layout_height="@dimen/_80sdp"
+                                  android:background="@drawable/fill_circle">
+
+                                  <com.rey.material.widget.ImageView
+                                      android:id="@+id/ivHotel"
+                                      android:layout_width="@dimen/_40sdp"
+                                      android:layout_height="@dimen/_40sdp"
+                                      android:layout_centerInParent="true"
+                                      android:scaleType="fitXY"
+                                      android:src="@drawable/iv_placeholder"
+                                      android:tint="@color/white" />
+                              </RelativeLayout>
+
+                              <com.rey.material.widget.TextView
+                                  style="@style/NormalLayout"
+                                  android:layout_marginTop="@dimen/_10sdp"
+                                  android:fontFamily="@font/sans_semibold"
+                                  android:gravity="center"
+                                  android:text="Hotel"
+                                  android:textColor="@color/white"
+                                  android:textSize="@dimen/_13sdp" />
+
+                          </LinearLayout>
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_130sdp"
+                              android:layout_marginStart="@dimen/_6sdp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                              <RelativeLayout
+                                  android:layout_width="@dimen/_80sdp"
+                                  android:layout_height="@dimen/_80sdp"
+                                  android:background="@drawable/fill_circle">
+
+                                  <com.rey.material.widget.ImageView
+                                      android:id="@+id/ivLocal"
+                                      android:layout_width="@dimen/_40sdp"
+                                      android:layout_height="@dimen/_40sdp"
+                                      android:layout_centerInParent="true"
+                                      android:scaleType="fitXY"
+                                      android:src="@drawable/iv_placeholder"
+                                      android:tint="@color/white" />
+                              </RelativeLayout>
+
+                              <com.rey.material.widget.TextView
+                                  style="@style/NormalLayout"
+                                  android:layout_marginTop="@dimen/_12sdp"
+                                  android:fontFamily="@font/sans_semibold"
+                                  android:gravity="center"
+                                  android:text="Local"
+                                  android:textColor="@color/white"
+                                  android:textSize="@dimen/_13sdp" />
+
+                          </LinearLayout>
+                      </LinearLayout>
+
+                      <LinearLayout
+                          style="@style/NormalLayout"
+                          android:layout_margin="@dimen/_8sdp"
+                          android:orientation="horizontal"
+                          android:visibility="gone"
+                          android:weightSum="2">
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_130sdp"
+                              android:layout_marginEnd="@dimen/_4sdp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                              <RelativeLayout
+                                  android:layout_width="@dimen/_80sdp"
+                                  android:layout_height="@dimen/_80sdp"
+                                  android:background="@drawable/fill_circle">
+
+                                  <com.rey.material.widget.ImageView
+                                      android:id="@+id/ivEmergency"
+                                      android:layout_width="@dimen/_40sdp"
+                                      android:layout_height="@dimen/_40sdp"
+                                      android:layout_centerInParent="true"
+                                      android:scaleType="fitXY"
+                                      android:src="@drawable/iv_placeholder"
+                                      android:tint="@color/white" />
+                              </RelativeLayout>
+
+                              <com.rey.material.widget.TextView
+                                  style="@style/NormalLayout"
+                                  android:layout_marginTop="@dimen/_12sdp"
+                                  android:fontFamily="@font/sans_semibold"
+                                  android:gravity="center"
+                                  android:text="Emergency"
+                                  android:textColor="@color/white"
+                                  android:textSize="@dimen/_13sdp" />
+
+                          </LinearLayout>
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_130sdp"
+                              android:layout_marginStart="@dimen/_4sdp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                              <RelativeLayout
+                                  android:layout_width="@dimen/_80sdp"
+                                  android:layout_height="@dimen/_80sdp"
+                                  android:background="@drawable/fill_circle">
+
+                                  <com.rey.material.widget.ImageView
+                                      android:id="@+id/ivDining"
+                                      android:layout_width="@dimen/_40sdp"
+                                      android:layout_height="@dimen/_40sdp"
+                                      android:layout_centerInParent="true"
+                                      android:scaleType="fitXY"
+                                      android:src="@drawable/iv_placeholder"
+                                      android:tint="@color/white" />
+                              </RelativeLayout>
+
+                              <com.rey.material.widget.TextView
+                                  style="@style/NormalLayout"
+                                  android:layout_marginTop="@dimen/_12sdp"
+                                  android:fontFamily="@font/sans_semibold"
+                                  android:gravity="center"
+                                  android:text="Dining"
+                                  android:textColor="@color/white"
+                                  android:textSize="@dimen/_13sdp" />
+
+                          </LinearLayout>
+                      </LinearLayout>
+
+                      <LinearLayout
+                          style="@style/NormalLayout"
+                          android:layout_margin="@dimen/_8sdp"
+                          android:orientation="horizontal"
+                          android:visibility="gone"
+                          android:weightSum="2">
+
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/_130sdp"
+                              android:layout_marginEnd="@dimen/_4sdp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                              android:orientation="vertical">
+
+                              <RelativeLayout
+                                  android:layout_width="@dimen/_80sdp"
+                                  android:layout_height="@dimen/_80sdp"
+                                  android:background="@drawable/fill_circle">
+
+                                  <com.rey.material.widget.ImageView
+                                      android:id="@+id/ivMeeting"
+                                      android:layout_width="@dimen/_40sdp"
+                                      android:layout_height="@dimen/_40sdp"
+                                      android:layout_centerInParent="true"
+                                      android:scaleType="fitXY"
+                                      android:src="@drawable/iv_placeholder"
+                                      android:tint="@color/white" />
+                              </RelativeLayout>
+
+                              <com.rey.material.widget.TextView
+                                  style="@style/NormalLayout"
+                                  android:layout_marginTop="@dimen/_12sdp"
+                                  android:fontFamily="@font/sans_semibold"
+                                  android:gravity="center"
+                                  android:text="Meeting"
+                                  android:textColor="@color/white"
+                                  android:textSize="@dimen/_13sdp" />
+
+                          </LinearLayout>
+
+                      </LinearLayout>
+      -->
+                </LinearLayout>
+            </LinearLayout>
+            <!-- </ScrollView>-->
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

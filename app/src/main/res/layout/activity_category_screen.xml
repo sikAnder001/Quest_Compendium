@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RootLayout"
+    android:orientation="vertical"
+    tools:context="com.questcompendium.activity.CategoryActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        style="@style/RootLayout"
+        android:layout_below="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="@style/RootLayout"
+            android:scaleType="centerCrop" />  <!-- android:src="@mipmap/iv_hotel"-->
+
+        <RelativeLayout
+            style="@style/RootLayout"
+            android:background="@color/black_transparency" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFacility"
+            style="@style/RecycleView78"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <include
+            style="@style/RootLayout"
+            layout="@layout/layout_empty" />
+    </RelativeLayout>
+</RelativeLayout>

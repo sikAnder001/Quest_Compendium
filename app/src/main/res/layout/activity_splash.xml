@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RootLayout"
+    android:gravity="center"
+    android:background="@color/colorSecondary">
+
+    <ImageView
+        android:layout_width="@dimen/logo_splash_height"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:padding="@dimen/padding_large"
+        android:src="@drawable/ic_splash"
+        android:visibility="visible" />
+
+    <TextView
+        style="@style/TvSplash"
+        android:gravity="center"
+        android:text="Quest"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/TvSplash"
+        android:gravity="center"
+        android:text="Compendium"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+</LinearLayout>

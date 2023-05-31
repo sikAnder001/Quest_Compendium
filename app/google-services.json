@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "24692396717",
+    "firebase_url": "https://quest-compendium-8b756.firebaseio.com",
+    "project_id": "quest-compendium-8b756",
+    "storage_bucket": "quest-compendium-8b756.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24692396717:android:a518af573a9cc341982c24",
+        "android_client_info": {
+          "package_name": "com.questcompendium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24692396717-qftd10baggk37u860oedf5mscd7uj8n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWvLahdsUx-cxdbWdO_lK1mGlbjFmlTWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24692396717-qftd10baggk37u860oedf5mscd7uj8n5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "24692396717-7qnrj7rqudsf3jv9hu8qq68s6le5f96b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.questcompendium"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

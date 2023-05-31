@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFocusButtonColor="#A89970"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="#A89970"
+        app:flashButtonVisible="true"
+        app:frameAspectRatioHeight="1"
+        app:frameAspectRatioWidth="1"
+        app:frameColor="@android:color/white"
+        app:frameCornersRadius="0dp"
+        app:frameCornersSize="50dp"
+        app:frameSize="0.60"
+        app:frameThickness="2dp"
+        app:maskColor="#BFF0F0F0" />
+
+    <TextView
+        style="@style/TvDxLarge"
+        android:layout_marginTop="@dimen/padding_xxxlarge"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#A89970"
+        android:textStyle="bold"
+        android:text="Please scan Hotel QR Code" />
+
+
+</FrameLayout>

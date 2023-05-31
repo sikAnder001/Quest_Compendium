@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlItemFacility"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/padding_mini">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true">
+
+        <com.rey.material.widget.ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.4"
+            android:src="@drawable/grey_circle"
+            android:visibility="gone" />
+
+        <!--  <com.jackandphantom.circularimageview.CircleImage
+              android:id="@+id/ivHotelMenu"
+              android:layout_width="@dimen/_50sdp"
+              android:layout_height="@dimen/_50sdp"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="@dimen/_6sdp"
+              android:adjustViewBounds="true"
+              android:alpha="0.4"
+              android:padding="@dimen/_8sdp"
+              android:scaleType="centerInside"
+              app:border_color="@color/white"
+              app:border_width="2dp" />-->
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/ivHotelMenu"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:adjustViewBounds="true"
+            android:alpha="0.4"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="centerInside"
+            app:siBorderColor="@color/white"
+            app:siBorderWidth="2dp" />
+        <!--android:tint="@color/colorDivider"-->
+
+        <com.rey.material.widget.TextView
+            android:id="@+id/tvMenuTitle"
+            style="@style/TvSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_75sdp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDivider"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Quest Compendium</string>
+
+    <!--Dashboard Screen-->
+    <string name="need_consultation">Need a Consultation</string>
+    <string name="need_consultation_desc">Get your queries listened, answered and resolved in all legal cases.</string>
+    <string name="open_case">Open a Case</string>
+    <string name="open_case_desc">Find a friend to support you in all your cases.</string>
+    <string name="login_as_lawyer">Login as a Lawyer</string>
+    <string name="login_as_lawyer_desc">Platform for all legal advisors to support those who are in need.</string>
+    <string name="low_details">Laws, Memorandam and Verdicts</string>
+    <string name="low_details_desc">Educate yourself with Laws and policies for the betterment.</string>
+
+
+    <!--Phone Login Screen-->
+    <string name="btn_continue">Continue</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="hint_enter_otp">Enter the OTP you received to</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="status_verification_failed">Verification failed</string>
+
+    <!--Welcome Screen-->
+    <string name="next">Go to Next</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <!--Empty screen-->
+    <string name="no_upcoming">No Upcoming</string>
+    <string name="no_upcoming_desc">No upcoming Trade found right now</string>
+
+    <string name="no_facility">No Facility</string>
+    <string name="no_facility_desc">No Facility found right now</string>
+
+    <string name="no_hotel">No Hotel</string>
+    <string name="no_hotel_desc">No Hotel found right now</string>
+    <!--
+        <string name="title_activity_subscription">Sign in</string>
+        <string name="prompt_email">Email</string>
+        <string name="prompt_password">Password</string>
+        <string name="action_sign_in">Sign in or register</string>
+        <string name="action_sign_in_short">Sign in</string>
+        <string name="welcome">"Welcome !"</string>
+        <string name="invalid_username">Not a valid username</string>
+        <string name="invalid_password">Password must be >5 characters</string>
+        <string name="login_failed">"Login failed"</string>-->
+
+    <string name="hotel">Hotel</string>
+    <string name="facility">Facility</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--main activity-->
+    <string name="location_permission">Location Permission Needed</string>
+    <string name="location_permission_msg">This app needs the Location permission, please accept to use location functionality</string>
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+    <string name="str_no_facility">Sorry! No facility found.</string>
+    <string name="title_home">HOME</string>
+    <string name="title_search">SEARCH</string>
+    <string name="title_notification">NOTIFICATION</string>
+    <string name="title_qr_code">QR-CODE</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="permission_camera_rationale">Access to the camera is needed for barcode detection.</string>
+    <string name="no_camera_permission">Cannot start the barcode reader because the camera permission was not granted.</string>
+    <string name="there_are_no_item_to_display_at_this_moment">There are no item to display at this moment.</string>
+    <string name="no_records_found">No Records Found</string>
+    <string name="no_internet">No Internet Connection</string>
+
+</resources>

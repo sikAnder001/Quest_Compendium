@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llEmpty"
+    style="@style/RootLayout"
+    android:background="@color/off_white"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <com.rey.material.widget.ImageView
+        android:id="@+id/ivEmptyImage"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:src="@drawable/iv_empty_collection" />
+
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/tvMainTitle"
+        style="@style/TvRippleCommon"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/no_upcoming"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+    <com.rey.material.widget.TextView
+        android:id="@+id/tvEmptyDesc"
+        style="@style/TvRippleCommon"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_4sdp"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/no_upcoming_desc"
+        android:textSize="@dimen/_12sdp" />
+
+</LinearLayout>
